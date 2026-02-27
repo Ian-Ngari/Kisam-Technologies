@@ -1,6 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/lib/services";
+
+export const metadata: Metadata = {
+  title: "Kisam Technologies | Security Services in Kenya",
+  description:
+    "Professional CCTV installation, alarm systems, smart gate automation, car alarms, and GPS tracking solutions across Kenya.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   return (

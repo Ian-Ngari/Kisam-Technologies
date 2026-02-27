@@ -1,5 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Shield, Cog, Radar, Lock } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Kisam Technologies | Security Specialists",
+  description:
+    "Learn about Kisam Technologies, a Nairobi-based security surveillance company serving clients across Kenya.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getServiceBySlug, services } from "@/lib/services";
 
@@ -8,6 +9,31 @@ type Params = {
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found | Kisam Technologies",
+    };
+  }
+
+  return {
+    title: `${service.title} | Kisam Technologies`,
+    description: service.description,
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
+    keywords: [
+      service.title,
+      `${service.title} Kenya`,
+      "security services Kenya",
+      "Kisam Technologies",
+    ],
+  };
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<Params> }) {

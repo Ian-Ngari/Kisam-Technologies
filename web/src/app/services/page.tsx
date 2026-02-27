@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { ServiceCard } from "@/components/service-card";
 import { services } from "@/lib/services";
+
+export const metadata: Metadata = {
+  title: "Security Services | Kisam Technologies",
+  description:
+    "Explore CCTV installation, alarm systems, smart gate automation, car alarm systems, and GPS tracking services by Kisam Technologies.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 export default function ServicesPage() {
   return (

@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Kisam Technologies | Nairobi, Kenya",
+  description:
+    "Contact Kisam Technologies in Nairobi for CCTV installation, alarm systems, smart gate automation, car alarms, and GPS tracking services.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <main className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
@@ -40,10 +51,10 @@ export default function ContactPage() {
 
           <div className="rounded-xl border border-white/10 bg-black/70 p-5 sm:p-6">
             <p className="text-sm text-slate-300">
-              <span className="font-semibold text-cyan-200">Phone:</span> +254 700 123 456
+              <span className="font-semibold text-cyan-200">Phone:</span> +254 701 841 358
             </p>
             <p className="mt-3 text-sm text-slate-300">
-              <span className="font-semibold text-cyan-200">Email:</span> info@kisamtech.com
+              <span className="font-semibold text-cyan-200">Email:</span> kisamtechnology@gmail.com
             </p>
             <p className="mt-3 text-sm text-slate-300">
               <span className="font-semibold text-cyan-200">Location:</span> Nairobi, Kenya
